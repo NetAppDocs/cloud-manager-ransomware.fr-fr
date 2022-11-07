@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, ransomware protection' 
+summary: Découvrez les nouveautés de la protection contre les attaques par ransomware. 
+---
+= Quelles sont les nouveautés de la protection contre les attaques par ransomware
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Découvrez les nouveautés de la protection contre les attaques par ransomware.
+
+
+
+== 7 novembre 2022
+
+
+
+=== Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées
+
+Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau Score de protection contre les attaques par ransomware affiche le score global et les zones de cybersécurité où des problèmes potentiels existent. Le panneau actions recommandées répertorie les actions que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware. Il fournit un lien pour examiner le problème et appliquer les actions si nécessaire. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions["En savoir plus"^].
+
+
+
+== 6 septembre 2022
+
+
+
+=== Nouveau panneau pour afficher les incidents de ransomware détectés sur vos clusters
+
+Le panneau _ransomware incidents_ montre les attaques par ransomware qui se sont produites sur vos systèmes. Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l'analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-incidents-detected-on-your-systems["En savoir plus"^].
+
+
+
+== 7 août 2022
+
+
+
+=== Nouveau panneau pour afficher les failles de sécurité sur vos clusters
+
+Le panneau « _Storage system VulnerVulnerfaille_ » affiche le nombre total de vulnérabilités de sécurité élevées, moyennes et faibles que l'outil conseiller numérique Active IQ a trouvées sur chacun de vos clusters ONTAP. Il est important d'immédiatement vérifier que vos systèmes ne sont pas ouverts aux attaques. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#storage-system-vulnerabilities["Cliquez ici pour plus d'informations"^].
+
+
+
+=== Nouveau panneau pour afficher les fichiers numérisés immuables
+
+Le panneau _Critical Data immuabilité_ affiche le nombre d'éléments de vos environnements de travail protégés contre les modifications et suppressions sur le stockage WORM grâce à la technologie ONTAP SnapLock. Vous pouvez ainsi afficher la quantité de données dont la copie est inaltérable, pour mieux comprendre vos plans de sauvegarde et de restauration par rapport aux attaques par ransomware. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#data-in-your-volumes-that-are-being-protected-using-snaplock["Cliquez ici pour plus d'informations"^].
+
+
+
+== 12 juin 2022
+
+
+
+=== L'état de l'audit du système de fichiers NAS est désormais surveillé pour les machines virtuelles de stockage ONTAP
+
+Une alerte est ajoutée au _Cyber résilience Map_ si moins de 40 % des ordinateurs virtuels de stockage de l'environnement de travail ont activé l'audit du système de fichiers. Vous pouvez afficher le nombre exact de SVM qui ne tracent pas et ne logent pas les événements SMB et NFS dans un journal d'audit du panneau _Harden Your ONTAP Environment_. Vous pouvez ensuite décider si l'audit sur ces SVM doit être activé.
+
+
+
+=== Les alertes s'affichent désormais lorsque l'option anti-ransomwares intégrée n'est pas active pour vos volumes
+
+Ces informations ont été signalées pour les systèmes ONTAP sur site dans le panel _Harden Your ONTAP_ Environments » auparavant, Mais une alerte est maintenant signalée dans le _Cyber résilience Map_ lorsque la fonctionnalité anti-ransomwares intégrée est activée dans moins de 40 % des volumes, afin que vous puissiez afficher ces informations dans le Tableau de bord.
+
+
+
+=== FSX pour les systèmes ONTAP est à présent suivi pour l'activation de snapshots de volumes
+
+Le panneau _Harden Your ONTAP Environments_ fournit maintenant l'état des copies Snapshot des volumes de votre système FSX pour ONTAP. Lorsque moins de 40 % des volumes sont protégés par des instantanés, vous recevez également une alerte dans le _Cyber résilience Map_.
+
+
+
+== 11 mai 2022
+
+
+
+=== Nouveau panneau permettant de suivre le renforcement de la sécurité de vos environnements ONTAP
+
+Un nouveau panneau _Harden vos environnements ONTAP_ fournit l'état de certains paramètres de vos systèmes ONTAP qui suivent la sécurité du déploiement en fonction du https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["Guide NetApp de renforcement de la sécurité des systèmes ONTAP"^] et au https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["Fonctionnalité ONTAP anti-ransomware"^] cela détecte et avertit de manière proactive des anomalies d'activité.
+
+Vous pouvez passer en revue les recommandations, puis décider comment vous souhaitez résoudre les problèmes potentiels. Suivez les étapes pour modifier les paramètres des clusters, reporter ces modifications à une autre fois ou ignorer la suggestion. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#status-of-ontap-systems-hardening["Cliquez ici pour plus d'informations"].
+
+
+
+=== Nouveau panneau indiquant comment les différentes catégories de données sont protégées à l'aide de Cloud Backup
+
+Ce nouveau panneau _Backup Status_ vous montre à quel point vos catégories de données les plus importantes sont sauvegardées au cas où vous devez procéder à une restauration suite à une attaque par ransomware. Ces données graphiques présentent le nombre d'éléments d'une catégorie spécifique dans un environnement sauvegardé par Cloud Backup. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#backup-status-of-your-critical-business-data["Cliquez ici pour plus d'informations"].
+
+
+
+== 15 mars 2022
+
+
+
+=== Nouveau panneau permettant de suivre l'état des autorisations de vos données stratégiques
+
+Un nouveau panneau _analyse des autorisations de données stratégiques métiers_ indique l'état des autorisations des données critiques pour votre entreprise. Ainsi, vous évaluez rapidement l'efficacité de la protection de vos données stratégiques. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#status-of-permissions-on-your-critical-business-data["Cliquez ici pour plus d'informations"].
+
+
+
+=== La zone autorisations ouvertes inclut désormais les comptes OneDrive et SharePoint
+
+La zone autorisations ouvertes du tableau de bord protection contre les attaques par ransomware inclut désormais les autorisations qui existent pour les fichiers analysés dans les comptes OneDrive et les comptes SharePoint.
+
+
+
+== 9 février 2022
+
+
+
+=== Nouveau service de protection contre les ransomwares
+
+Le nouveau service de protection contre les ransomwares vous permet de consulter des informations pertinentes sur la cybersécurité et d'évaluer la résilience de vos données face à une cyberattaque. Il fournit également une liste d'alertes et de résolutions de problèmes afin de sécuriser vos données.
+
+link:concept-ransomware-protection.html["En savoir plus sur ce nouveau service"].
