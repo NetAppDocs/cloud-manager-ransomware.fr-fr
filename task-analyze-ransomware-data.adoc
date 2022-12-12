@@ -44,7 +44,7 @@ Les trois types d'actions recommandées sont conformes à la https://www.ftc.gov
 
 image:screenshot_ransomware_protection_score1.png["Capture d'écran affichant le panneau Score de protection contre les attaques par ransomware et le panneau actions recommandées."]
 
-Dans cette page d'exemple, il n'y a qu'un seul type de recommandation pour la catégorie "protéger". Et cette recommandation est pertinente pour 258 dossiers.
+Dans cet exemple de page, sept actions sont recommandées pour la catégorie "protéger". La première recommandation est pertinente pour 258 dossiers.
 
 Ce panneau prend en charge les environnements de travail et les sources de données qui ont été ajoutées au Cloud Data Sense.
 
@@ -58,16 +58,27 @@ Pour afficher la liste détaillée des données qui ont été identifiées comme
 
 Ensuite, vous pouvez décider si vous voulez appliquer l'action recommandée sur tous ces fichiers, ou sur seulement certains d'entre eux.
 
-Après avoir corrigé l'action recommandée, la prochaine actualisation du panneau Score de protection contre les attaques par ransomware (toutes les 5 minutes) ajuste le nombre pour le score. Vous pouvez également cliquer sur le bouton *Actualiser* pour mettre à jour la page maintenant.
+Après avoir corrigé l'action recommandée, la prochaine actualisation du panneau Score de protection contre les attaques par ransomware (toutes les 5 minutes) ajuste le nombre pour le score. Vous pouvez également cliquer sur le bouton *Re-Scan* pour mettre à jour la page maintenant.
 
 
 
 === Liste des actions recommandées
 
-Actuellement, le seul critère évalué pour une action recommandée est de savoir si vos données sensibles sont stockées sur des sources de données non protégées, sur des sites où le logiciel de protection par ransomware ne peut pas protéger les données. Vous pouvez utiliser Data Sense pour déplacer rapidement ces fichiers vers une source de données plus protégée. Vous allez utiliser la fonctionnalité Data Sense pour https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share["Déplacer les fichiers source vers un partage NFS"^].
+Il s'agit des actions recommandées actuellement suivies et des solutions suggérées.
 
-Généralement, votre service INFORMATIQUE applique des règles limitant les données sensibles de certains sites d'entreprise. Cette action recommandée vous permet d'identifier les fichiers qui ont des données sensibles et de les déplacer vers une source de données plus sûre, où les fichiers sensibles *PEUVENT être stockés*.
+[cols="33,33,33"]
+|===
+| Action recommandée | Description | Solution possible 
 
+
+| Réduisez les autorisations pour les éléments X sensibles avec des autorisations larges | Les fichiers sensibles avec des autorisations ouvertes ont été trouvés dans vos sources de données par Cloud Data Sense. Il s'agit notamment de toutes les données sensibles (données personnelles et données personnelles sensibles) qui disposent d'autorisations « ouvertes à l'entreprise » ou « publiques ». | Cliquez sur le bouton *Investigation* pour chaque source de données et vous serez redirigé vers la page recherche de détection de données avec la liste de tous les fichiers qui répondent aux critères de l'action recommandée dans cette source de données. Vous pouvez alors décider comment réduire les autorisations générales sur ces fichiers. 
+
+
+| Déplacez X éléments sensibles de y sources de données non protégées vers des emplacements sécurisés | Cloud Data Sense a détecté des données sensibles sur des sources de données non protégées ; dans certains cas, il s'agit là où un logiciel de protection par ransomware n'est pas en mesure de protéger les données. Généralement, votre service INFORMATIQUE applique des règles limitant les données sensibles de certains sites d'entreprise. Cette action recommandée vous permet d'identifier les fichiers qui ont des données sensibles et de les déplacer vers une source de données plus sûre, où les données sensibles *SONT* autorisées à être stockées. | Vous pouvez utiliser Data Sense pour déplacer rapidement ces fichiers vers une source de données plus protégée. Vous allez utiliser la fonctionnalité Data Sense pour https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share["Déplacer les fichiers source vers un partage NFS"^]. 
+
+
+| Le patch X ouvre les examens de sécurité des variables à travers les sources de données Y. | Des règles CVE non corrigées (vulnérabilités et expositions courantes) ont été trouvées sur vos systèmes ONTAP et/ou Cloud Volumes ONTAP sur site. Ces problèmes sont identifiés uniquement si le produit Digital Advisor (anciennement Active IQ Digital Advisor) est intégré à vos systèmes de stockage. Il s'agit de vulnérabilités connues sur les systèmes de stockage NetApp dont des correctifs sont disponibles pour résoudre le problème CVE. Les PE NetApp sont répertoriés sur le https://security.netapp.com/advisory/["Page sécurité du produit"^]. | Cliquez sur le bouton *Digital Advisor* pour chaque source de données et vous serez redirigé vers la page _Security Vulnerances_ du conseiller numérique. Vous y trouverez les détails sur les variables d'évaluation des variables ouvertes et l'action recommandée pour résoudre chaque CVE. Souvent, la solution consiste à mettre à niveau le logiciel ONTAP du système. https://docs.netapp.com/us-en/active-iq/task_increase_protection_against_hackers_and_Ransomware_attacks.html["En savoir plus sur la page failles de sécurité"]. 
+|===
 
 
 == Carte de résilience cybernétique
@@ -102,16 +113,16 @@ Il s'agit des alertes et des corrections proposées actuellement suivies.
 | Un ou plusieurs référentiels (volumes, compartiments, etc.) de vos sources de données ne sont pas analysés par Data Sense | Certaines données de vos sources de données ne sont pas analysées à l'aide de https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["Sens des données cloud"^] afin d'identifier les problèmes de conformité et de confidentialité, et de trouver des opportunités d'optimisation. | Cliquez sur le lien pour lancer Data Sense et activer la numérisation et le mappage des éléments qui ne sont pas numérisés. 
 
 
-| L'anti-ransomwares intégré n'est pas actif pour tous les volumes | Certains volumes du système ONTAP sur site ne disposent pas de la https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Fonctionnalité NetApp anti-ransomware"^] activé. | Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l'environnement ONTAP et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
+| L'anti-ransomwares intégré n'est pas actif pour tous les volumes | Certains volumes du système ONTAP sur site ne disposent pas de la https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html["Fonctionnalité NetApp anti-ransomware"^] activé. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
 
 
-| La version ONTAP n'est pas mise à jour | La version du logiciel ONTAP installée sur vos clusters n'est pas conforme aux recommandations de la https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["Guide NetApp de renforcement de la sécurité des systèmes ONTAP"^]. | Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l'environnement ONTAP et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
+| La version ONTAP n'est pas mise à jour | La version du logiciel ONTAP installée sur vos clusters n'est pas conforme aux recommandations de la https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf["Guide NetApp de renforcement de la sécurité des systèmes ONTAP"^]. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
 
 
-| Les snapshots ne sont pas configurés pour tous les volumes | Certains volumes de l'environnement de travail ne sont pas protégés en créant des snapshots de volume. | Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l'environnement ONTAP et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
+| Les snapshots ne sont pas configurés pour tous les volumes | Certains volumes de l'environnement de travail ne sont pas protégés en créant des snapshots de volume. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème. 
 
 
-| L'audit des opérations de fichiers n'est pas activé pour tous les SVM | Certains ordinateurs virtuels de stockage de l'environnement de travail ne disposent pas d'un audit du système de fichiers activé. Il est recommandé de suivre les actions des utilisateurs sur vos fichiers. | Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l'environnement ONTAP et à l'environnement de travail avec le problème. Vous pouvez déterminer si vous devez activer l'audit NAS sur vos SVM. 
+| L'audit des opérations de fichiers n'est pas activé pour tous les SVM | Certains ordinateurs virtuels de stockage de l'environnement de travail ne disposent pas d'un audit du système de fichiers activé. Il est recommandé de suivre les actions des utilisateurs sur vos fichiers. | Cliquez sur le lien et vous êtes redirigé vers le <<Renforcement des systèmes ONTAP,Renforcez le panneau de l'environnement ONTAP>> et à l'environnement de travail avec le problème. Vous pouvez déterminer si vous devez activer l'audit NAS sur vos SVM. 
 |===
 
 

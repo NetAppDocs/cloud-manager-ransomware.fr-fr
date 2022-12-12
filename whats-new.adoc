@@ -18,6 +18,22 @@ Découvrez les nouveautés de la protection contre les attaques par ransomware.
 
 
 
+== 11 décembre 2022
+
+
+
+=== De nouvelles actions recommandées ont été ajoutées au panneau Score de protection contre les attaques par ransomware
+
+Deux nouvelles actions recommandées sont maintenant affichées pour les problèmes de protection par ransomware suivants rencontrés sur vos systèmes de stockage :
+
+* _Réduire les autorisations pour les éléments X sensibles avec des autorisations larges_ - les fichiers sensibles avec des autorisations ouvertes ont été trouvés dans vos sources de données
+* _Patch X Open CDE à travers les sources de données y_ - des CVC non corrigés ont été trouvés sur vos systèmes ONTAP
+
+
+Vous pouvez sélectionner ces actions dans l'interface utilisateur, puis suivre le workflow pour résoudre les problèmes sous-jacents. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#list-of-recommended-actions["Voir la liste de toutes les actions recommandées"].
+
+
+
 == 13 novembre 2022
 
 
