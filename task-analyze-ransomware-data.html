@@ -622,7 +622,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-18 20:05:19 +0000">11/18/2022</time>
+    <time datetime="2022-12-12 20:05:27 +0000">12/12/2022</time>
     
   
 
@@ -684,7 +684,7 @@
 <p><span class="image"><img src="./media/screenshot_ransomware_protection_score1.png" alt="Capture d&#8217;écran affichant le panneau Score de protection contre les attaques par ransomware et le panneau actions recommandées."></span></p>
 </div>
 <div class="paragraph">
-<p>Dans cette page d&#8217;exemple, il n&#8217;y a qu&#8217;un seul type de recommandation pour la catégorie "protéger". Et cette recommandation est pertinente pour 258 dossiers.</p>
+<p>Dans cet exemple de page, sept actions sont recommandées pour la catégorie "protéger". La première recommandation est pertinente pour 258 dossiers.</p>
 </div>
 <div class="paragraph">
 <p>Ce panneau prend en charge les environnements de travail et les sources de données qui ont été ajoutées au Cloud Data Sense.</p>
@@ -705,16 +705,44 @@
 <p>Ensuite, vous pouvez décider si vous voulez appliquer l&#8217;action recommandée sur tous ces fichiers, ou sur seulement certains d&#8217;entre eux.</p>
 </div>
 <div class="paragraph">
-<p>Après avoir corrigé l&#8217;action recommandée, la prochaine actualisation du panneau Score de protection contre les attaques par ransomware (toutes les 5 minutes) ajuste le nombre pour le score. Vous pouvez également cliquer sur le bouton <strong>Actualiser</strong> pour mettre à jour la page maintenant.</p>
+<p>Après avoir corrigé l&#8217;action recommandée, la prochaine actualisation du panneau Score de protection contre les attaques par ransomware (toutes les 5 minutes) ajuste le nombre pour le score. Vous pouvez également cliquer sur le bouton <strong>Re-Scan</strong> pour mettre à jour la page maintenant.</p>
 </div>
 <div class="sect2">
 <h3 id="liste-des-actions-recommandées">Liste des actions recommandées</h3>
 <div class="paragraph">
-<p>Actuellement, le seul critère évalué pour une action recommandée est de savoir si vos données sensibles sont stockées sur des sources de données non protégées, sur des sites où le logiciel de protection par ransomware ne peut pas protéger les données. Vous pouvez utiliser Data Sense pour déplacer rapidement ces fichiers vers une source de données plus protégée. Vous allez utiliser la fonctionnalité Data Sense pour <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share" target="_blank" rel="noopener">"Déplacer les fichiers source vers un partage NFS"</a>.</p>
+<p>Il s&#8217;agit des actions recommandées actuellement suivies et des solutions suggérées.</p>
 </div>
-<div class="paragraph">
-<p>Généralement, votre service INFORMATIQUE applique des règles limitant les données sensibles de certains sites d&#8217;entreprise. Cette action recommandée vous permet d&#8217;identifier les fichiers qui ont des données sensibles et de les déplacer vers une source de données plus sûre, où les fichiers sensibles <strong>PEUVENT être stockés</strong>.</p>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Action recommandée</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Solution possible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Réduisez les autorisations pour les éléments X sensibles avec des autorisations larges</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Les fichiers sensibles avec des autorisations ouvertes ont été trouvés dans vos sources de données par Cloud Data Sense. Il s&#8217;agit notamment de toutes les données sensibles (données personnelles et données personnelles sensibles) qui disposent d&#8217;autorisations « ouvertes à l&#8217;entreprise » ou « publiques ».</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le bouton <strong>Investigation</strong> pour chaque source de données et vous serez redirigé vers la page recherche de détection de données avec la liste de tous les fichiers qui répondent aux critères de l&#8217;action recommandée dans cette source de données. Vous pouvez alors décider comment réduire les autorisations générales sur ces fichiers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Déplacez X éléments sensibles de y sources de données non protégées vers des emplacements sécurisés</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud Data Sense a détecté des données sensibles sur des sources de données non protégées ; dans certains cas, il s&#8217;agit là où un logiciel de protection par ransomware n&#8217;est pas en mesure de protéger les données. Généralement, votre service INFORMATIQUE applique des règles limitant les données sensibles de certains sites d&#8217;entreprise. Cette action recommandée vous permet d&#8217;identifier les fichiers qui ont des données sensibles et de les déplacer vers une source de données plus sûre, où les données sensibles <strong>SONT</strong> autorisées à être stockées.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vous pouvez utiliser Data Sense pour déplacer rapidement ces fichiers vers une source de données plus protégée. Vous allez utiliser la fonctionnalité Data Sense pour <a href="https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share" target="_blank" rel="noopener">"Déplacer les fichiers source vers un partage NFS"</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Le patch X ouvre les examens de sécurité des variables à travers les sources de données Y.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Des règles CVE non corrigées (vulnérabilités et expositions courantes) ont été trouvées sur vos systèmes ONTAP et/ou Cloud Volumes ONTAP sur site. Ces problèmes sont identifiés uniquement si le produit Digital Advisor (anciennement Active IQ Digital Advisor) est intégré à vos systèmes de stockage. Il s&#8217;agit de vulnérabilités connues sur les systèmes de stockage NetApp dont des correctifs sont disponibles pour résoudre le problème CVE. Les PE NetApp sont répertoriés sur le <a href="https://security.netapp.com/advisory/" target="_blank" rel="noopener">"Page sécurité du produit"</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le bouton <strong>Digital Advisor</strong> pour chaque source de données et vous serez redirigé vers la page <em>Security Vulnerances</em> du conseiller numérique. Vous y trouverez les détails sur les variables d&#8217;évaluation des variables ouvertes et l&#8217;action recommandée pour résoudre chaque CVE. Souvent, la solution consiste à mettre à niveau le logiciel ONTAP du système. <a href="https://docs.netapp.com/us-en/active-iq/task_increase_protection_against_hackers_and_Ransomware_attacks.html">"En savoir plus sur la page failles de sécurité"</a>.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -786,22 +814,22 @@
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">L&#8217;anti-ransomwares intégré n&#8217;est pas actif pour tous les volumes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Certains volumes du système ONTAP sur site ne disposent pas de la <a href="https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html" target="_blank" rel="noopener">"Fonctionnalité NetApp anti-ransomware"</a> activé.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l&#8217;environnement ONTAP et à l&#8217;environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le <a href="#renforcement-des-systèmes-ontap">Renforcez le panneau de l&#8217;environnement ONTAP</a> et à l&#8217;environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">La version ONTAP n&#8217;est pas mise à jour</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">La version du logiciel ONTAP installée sur vos clusters n&#8217;est pas conforme aux recommandations de la <a href="https://www.netapp.com/pdf.html?item=/media/10674-tr4569.pdf" target="_blank" rel="noopener">"Guide NetApp de renforcement de la sécurité des systèmes ONTAP"</a>.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l&#8217;environnement ONTAP et à l&#8217;environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le <a href="#renforcement-des-systèmes-ontap">Renforcez le panneau de l&#8217;environnement ONTAP</a> et à l&#8217;environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Les snapshots ne sont pas configurés pour tous les volumes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Certains volumes de l&#8217;environnement de travail ne sont pas protégés en créant des snapshots de volume.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l&#8217;environnement ONTAP et à l&#8217;environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le <a href="#renforcement-des-systèmes-ontap">Renforcez le panneau de l&#8217;environnement ONTAP</a> et à l&#8217;environnement de travail avec le problème. Vous y trouverez des informations sur la meilleure façon de résoudre le problème.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">L&#8217;audit des opérations de fichiers n&#8217;est pas activé pour tous les SVM</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Certains ordinateurs virtuels de stockage de l&#8217;environnement de travail ne disposent pas d&#8217;un audit du système de fichiers activé. Il est recommandé de suivre les actions des utilisateurs sur vos fichiers.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le  of ONTAP systems hardening,Renforcez le panneau de l&#8217;environnement ONTAP et à l&#8217;environnement de travail avec le problème. Vous pouvez déterminer si vous devez activer l&#8217;audit NAS sur vos SVM.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cliquez sur le lien et vous êtes redirigé vers le <a href="#renforcement-des-systèmes-ontap">Renforcez le panneau de l&#8217;environnement ONTAP</a> et à l&#8217;environnement de travail avec le problème. Vous pouvez déterminer si vous devez activer l&#8217;audit NAS sur vos SVM.</p></td>
 </tr>
 </tbody>
 </table>
