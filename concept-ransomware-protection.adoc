@@ -14,7 +14,7 @@ summary: 'Les attaques par ransomware peuvent coûter du temps, des ressources e
 
 
 [role="lead"]
-Les attaques par ransomware peuvent coûter du temps, des ressources et de la réputation à l'entreprise. Le service BlueXP protection contre les attaques par ransomware vous permet de consulter des informations pertinentes sur la cybersécurité et d'évaluer la résilience de votre organisation face à une cyber-attaque. Il fournit également une liste d'alertes et de résolutions de problèmes afin de sécuriser vos données.
+Les attaques par ransomware peuvent coûter du temps, des ressources et de la réputation à l'entreprise. Le service BlueXP (anciennement Cloud Manager) protection contre les attaques par ransomware vous permet de consulter des informations pertinentes sur la cybersécurité et d'évaluer la résilience de votre entreprise face à une cyberattaque. Il fournit également une liste d'alertes et de résolutions de problèmes afin de sécuriser vos données.
 
 https://cloud.netapp.com/cyberstorage["Découvrez les utilisations de la protection contre les ransomwares"^].
 

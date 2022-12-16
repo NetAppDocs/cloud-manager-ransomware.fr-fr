@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-analyze-ransomware-data.html 
 keywords: personal data, personal information, sensitive, personal sensitive data, governance, data sense, ransomware, ransomware protection, cyberstorage, cyber attack, cybersecurity, permissions 
-summary: Utilisez le tableau de bord protection contre les attaques par ransomware pour afficher un aperçu de la résilience cybernétique de tous vos environnements de travail et sources de données BlueXP. Vous pouvez explorer chaque zone pour obtenir plus de détails et des corrections possibles. 
+summary: 'Utilisez le tableau de bord protection contre les attaques par ransomware pour bénéficier d"une vue d"ensemble de la résilience cybernétique de tous vos environnements de travail BlueXP et de sources de données supplémentaires. Vous pouvez explorer chaque zone pour obtenir plus de détails et des corrections possibles.' 
 ---
 = Gestion des recommandations en matière de cybersécurité pour vos sources de données
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Utilisez le tableau de bord protection contre les attaques par ransomwa
 
 
 [role="lead"]
-Utilisez le tableau de bord protection contre les attaques par ransomware pour afficher une vue d'ensemble de la résilience cybernétique de tous vos environnements de travail et sources de données BlueXP (anciennement Cloud Manager). Vous pouvez explorer chaque zone pour obtenir plus de détails et des corrections possibles.
+Utilisez le tableau de bord protection contre les ransomwares pour bénéficier d'une vue d'ensemble détaillée de la résilience cybernétique de tous vos environnements de travail BlueXP (anciennement Cloud Manager) et de sources de données supplémentaires. Vous pouvez explorer chaque zone pour obtenir plus de détails et des corrections possibles.
 
 Dans le menu de navigation de gauche BlueXP, sélectionnez *protection > protection contre les attaques par ransomware*.
 
@@ -71,7 +71,7 @@ Il s'agit des actions recommandées actuellement suivies et des solutions suggé
 | Action recommandée | Description | Solution possible 
 
 
-| Réduisez les autorisations pour les éléments X sensibles avec des autorisations larges | Les fichiers sensibles avec des autorisations ouvertes ont été trouvés dans vos sources de données par Cloud Data Sense. Il s'agit notamment de toutes les données sensibles (données personnelles et données personnelles sensibles) qui disposent d'autorisations « ouvertes à l'entreprise » ou « publiques ». | Cliquez sur le bouton *Investigation* pour chaque source de données et vous serez redirigé vers la page recherche de détection de données avec la liste de tous les fichiers qui répondent aux critères de l'action recommandée dans cette source de données. Vous pouvez alors décider comment réduire les autorisations générales sur ces fichiers. 
+| Réduisez les autorisations pour les éléments X sensibles avec des autorisations larges | Les fichiers sensibles avec des autorisations ouvertes ont été trouvés dans vos sources de données par Cloud Data Sense. Il s'agit notamment de toutes les données sensibles (données personnelles et données personnelles sensibles) qui disposent d'autorisations « ouvertes à l'entreprise » ou « publiques ». | Cliquez sur le bouton *Investigation* pour chaque source de données et vous serez redirigé vers la page Investigation de détection de données, où vous pouvez afficher tous les fichiers sensibles à risque et prendre des mesures supplémentaires pour réduire ce risque. Cela inclut la manière de réduire les autorisations générales sur ces fichiers. 
 
 
 | Déplacez X éléments sensibles de y sources de données non protégées vers des emplacements sécurisés | Cloud Data Sense a détecté des données sensibles sur des sources de données non protégées ; dans certains cas, il s'agit là où un logiciel de protection par ransomware n'est pas en mesure de protéger les données. Généralement, votre service INFORMATIQUE applique des règles limitant les données sensibles de certains sites d'entreprise. Cette action recommandée vous permet d'identifier les fichiers qui ont des données sensibles et de les déplacer vers une source de données plus sûre, où les données sensibles *SONT* autorisées à être stockées. | Vous pouvez utiliser Data Sense pour déplacer rapidement ces fichiers vers une source de données plus protégée. Vous allez utiliser la fonctionnalité Data Sense pour https://docs.netapp.com/us-en/cloud-manager-data-sense/task-managing-highlights.html#moving-source-files-to-an-nfs-share["Déplacer les fichiers source vers un partage NFS"^]. 
@@ -221,9 +221,9 @@ Au départ, ce volet affiche les données basées sur les règles par défaut qu
 
 Le graphique montre l'analyse des autorisations de toutes les données qui répondent aux critères de vos politiques. Il indique le nombre d'éléments suivants :
 
-* Ouvert aux autorisations publiques – éléments que Data Sense considère comme ouverts au public
-* Ouvert aux autorisations de l'entreprise – éléments que Data Sense considère comme ouverts à l'organisation
-* Aucune autorisation ouverte : les éléments que Data Sense considère comme n'ayant aucune autorisation ouverte
+* Ouvert aux autorisations publiques - les éléments que Data Sense considère comme ouverts au public
+* Ouvert aux autorisations de l'entreprise - éléments que Data Sense considère comme ouverts à l'organisation
+* Aucune autorisation ouverte - les éléments que Data Sense considère comme n'étant pas d'autorisations ouvertes
 * Autorisations inconnues : éléments que Data Sense considère comme des autorisations inconnues
 
 

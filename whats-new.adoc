@@ -40,7 +40,7 @@ Vous pouvez sélectionner ces actions dans l'interface utilisateur, puis suivre 
 
 === Nouveaux panneaux pour afficher votre score global de protection contre les attaques par ransomware et les actions recommandées
 
-Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. Le panneau _Overransomware protection Score_ affiche le score global et les zones de cybersécurité où il existe des problèmes potentiels. Le panneau _Recommended actions_ répertorie les actions potentielles que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware et fournit un lien pour examiner les problèmes afin que vous puissiez appliquer les actions si nécessaire. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions["En savoir plus"^].
+Le panneau _Overransomware protection Score_ affiche le score global et les zones de cybersécurité où il existe des problèmes potentiels. Le panneau _Recommended actions_ répertorie les actions potentielles que vous pouvez effectuer pour améliorer votre résilience à une attaque par ransomware et fournit un lien pour examiner les problèmes afin que vous puissiez appliquer les actions si nécessaire. Ces deux nouveaux panneaux travaillent ensemble pour identifier la résilience de vos données face à une attaque par ransomware et ce que vous pouvez faire pour améliorer votre score. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-analyze-ransomware-data.html#ransomware-protection-score-and-recommended-actions["En savoir plus"^].
 
 
 
