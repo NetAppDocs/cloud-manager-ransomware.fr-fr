@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: task-monitor-ransomware-alerts.html 
+keywords: ransomware, status, monitor, alert, notification 
+summary: 'Vous pouvez afficher le statut des alertes par ransomware dans le Centre de notification BlueXP. Vous pouvez également configurer les notifications à envoyer par e-mail afin de vous informer de l"activité importante du système, même lorsque vous n"êtes pas connecté au système.' 
+---
+= Surveillance de l'état des alertes par ransomware
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez afficher le statut des alertes par ransomware dans le Centre de notification BlueXP. Vous pouvez également configurer les notifications à envoyer par e-mail afin de vous informer de l'activité importante du système, même lorsque vous n'êtes pas connecté au système.
+
+Le centre de notification surveille la progression des incidents par ransomware afin que vous puissiez vérifier s'ils ont été résolus ou non. Vous pouvez afficher les notifications en cliquant sur le bouton (image:button_bell_icon.png["signal sonore de notification"]) Dans la barre de menus BlueXP. Vous pouvez également configurer BlueXP pour envoyer des notifications par e-mail en tant qu'alertes.
+
+À ce stade, un seul événement déclenche des alertes par e-mail :
+
+* Attaques par ransomware potentielles détectées sur votre système
+
+
+Par défaut, les administrateurs de compte BlueXP recevront des e-mails pour toutes les alertes « critiques » et « recommandations ». Par défaut, tous les autres utilisateurs et destinataires sont configurés pour ne pas recevoir d'e-mails de notification. Des e-mails peuvent être envoyés à tout utilisateur BlueXP qui fait partie de votre compte Cloud NetApp, ou à tout autre destinataire ayant besoin de connaître des incidents liés à la protection par ransomware.
+
+Vous devez sélectionner le type de notification « critique » pour recevoir les alertes par e-mail de protection contre les ransomwares.
+
+https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-monitor-cm-operations.html["En savoir plus sur le Centre de notification"^] et comment envoyer des e-mails d'alerte en cas d'incident de protection par ransomware.

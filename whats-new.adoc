@@ -18,6 +18,16 @@ Découvrez les nouveautés de la protection contre les attaques par ransomware.
 
 
 
+== 9 janvier 2023
+
+
+
+=== La prise en charge a été ajoutée pour recevoir les alertes de protection contre les ransomwares par e-mail et dans le Centre de notification
+
+La protection contre les ransomwares a été intégrée au service de notification BlueXP. Vous pouvez afficher les notifications de protection contre les attaques par ransomware en cliquant sur la cloche de notification dans la barre de menus BlueXP. Vous pouvez également configurer BlueXP pour envoyer des notifications par e-mail en tant qu'alertes afin de vous informer de l'activité système importante, même lorsque vous n'êtes pas connecté au système. Cet e-mail peut être envoyé aux destinataires qui doivent avoir connaissance d'alertes par ransomware. https://docs.netapp.com/us-en/cloud-manager-ransomware/task-monitor-ransomware-alerts.html["Découvrez comment"].
+
+
+
 == 11 décembre 2022
 
 

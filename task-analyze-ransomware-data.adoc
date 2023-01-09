@@ -302,17 +302,20 @@ Ainsi, lorsque vous créez des stratégies pour afficher vos données stratégiq
 
 == Incidents d'attaque par ransomware détectés sur vos systèmes
 
-Les incidents d'attaques par ransomware détectés sur vos systèmes gérés s'affichent sous forme d'alertes dans le panneau _ransomware incidents_. Cela inclut la corruption des données et les événements de chiffrement. Le panneau affiche le nombre de fichiers cryptés identifiés dans le volume suspect, les types d'extensions de fichier et le moment où l'attaque s'est produite.
+Les incidents d'attaques par ransomware détectés sur vos systèmes gérés s'affichent sous forme d'alertes dans le panneau _ransomware incidents_. Cela inclut les événements de chiffrement, les extensions de fichiers suspects, les attaques par ransomware et les activités malveillantes. Le panneau affiche le type d'incident et indique si des actions automatiques ont été exécutées pour tenter de résoudre le problème. Par exemple, une copie Snapshot d'un volume peut être générée et envoyée dans le cloud.
 
 image:screenshot_ransomware_incidents.png["Capture d'écran du panneau attaques par ransomware."]
 
 Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l'analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware. https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html["En savoir plus"^].
 
-Pour analyser les incidents, vous devez avoir installé et configuré NetApp Cloud Secure. https://docs.netapp.com/us-en/cloudinsights/cs_intro.html["En savoir plus sur Cloud Secure"^]. Vous pouvez ensuite cliquer sur le bouton *Analyze* pour obtenir des recommandations pour les étapes suivantes de la résolution du problème.
+Vous pouvez cliquer sur image:button_down_caret.png[""] pour développer un incident afin d'afficher le nombre de fichiers chiffrés identifiés dans le volume suspect, les types d'extensions de fichier et le moment de l'attaque.
+
+image:screenshot_ransomware_incidents_expanded.png["Capture d'écran du panneau incidents ransomware développée pour afficher les actions automatiques de vos volumes."]
+
+Vous pouvez cliquer sur le bouton *résoudre* pour supprimer l'incident de l'interface utilisateur. Une boîte de dialogue s'affiche pour voir si l'incident signalé était ou non un vrai ransomware. Cliquez sur *Oui* si le problème était un vrai incident de ransomware. Cliquez sur *non* si le problème n'était pas un réel incident de ransomware.
 
 .Prérequis
-* BlueXP Connector doit être installé sur votre site, non déployé auprès d'un fournisseur cloud.
-* Vous devez disposer d'un cluster ONTAP sur site qui exécute ONTAP 9.10.1 ou version ultérieure
-* Vous devez disposer d'une licence *MT_EK_MGMT* (ONTAP 9.10) ou *anti-ransomware* (ONTAP 9.11.1 +) sur au moins un nœud du cluster
-* La solution NetApp ARP doit avoir été activée pendant une période d'apprentissage initiale (également appelée « exécution à sec ») pendant 30 jours avant de passer au « mode actif », offrant ainsi suffisamment de temps pour évaluer les caractéristiques de la charge de travail et signaler de façon adéquate les attaques par ransomware suspectes.
+* Vous devez disposer d'un cluster ONTAP sur site qui exécute ONTAP 9.11 ou version ultérieure.
+* La licence *anti_ransomware* (ONTAP 9.11.1 +) doit être installée sur au moins un nœud du cluster.
+* La protection autonome contre les ransomwares (ARP) NetApp doit avoir été activée pendant une période d'apprentissage initiale (également appelée « exécution à sec ») pendant 30 jours avant de passer en « mode actif », ce qui lui permet d'évaluer les caractéristiques de la charge de travail et de signaler de façon adéquate les attaques par ransomware suspectes.
 

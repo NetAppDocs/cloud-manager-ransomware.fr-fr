@@ -19,6 +19,8 @@ sidebar:
     entries:
     - title: Découvrez la protection contre les ransomwares
       url: "/concept-ransomware-protection.html"
+    - title: Surveillance des alertes par ransomware dans le Centre de notification
+      url: "/task-monitor-ransomware-alerts.html"
   - title: Protection contre les ransomwares
     entries:
     - title: Gérez les recommandations en matière de cybersécurité pour vos données
