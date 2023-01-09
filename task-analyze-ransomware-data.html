@@ -374,6 +374,8 @@
           
 
 
+
+
         </li>
       </ul>
     
@@ -505,6 +507,13 @@
       class=" "
     ><a class="na-navbar-padding" href="/fr-fr/cloud-manager-ransomware/concept-ransomware-protection.html">
         Découvrez la protection contre les ransomwares
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Surveillance des alertes par ransomware dans le Centre de notification"
+      data-li-level="2#" 
+      class=" "
+    ><a class="na-navbar-padding" href="/fr-fr/cloud-manager-ransomware/task-monitor-ransomware-alerts.html">
+        Surveillance des alertes par ransomware dans le Centre de notification
       </a></li></ul></li><li 
       data-pdf-exists="true" 
       data-pdf-filename="Protection contre les ransomwares"
@@ -622,7 +631,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-16 19:05:29 +0000">12/16/2022</time>
+    <time datetime="2023-01-09 14:28:49 +0000">01/09/2023</time>
     
   
 
@@ -1145,7 +1154,7 @@
 <h2 id="incidents-dattaque-par-ransomware-détectés-sur-vos-systèmes">Incidents d&#8217;attaque par ransomware détectés sur vos systèmes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Les incidents d&#8217;attaques par ransomware détectés sur vos systèmes gérés s&#8217;affichent sous forme d&#8217;alertes dans le panneau <em>ransomware incidents</em>. Cela inclut la corruption des données et les événements de chiffrement. Le panneau affiche le nombre de fichiers cryptés identifiés dans le volume suspect, les types d&#8217;extensions de fichier et le moment où l&#8217;attaque s&#8217;est produite.</p>
+<p>Les incidents d&#8217;attaques par ransomware détectés sur vos systèmes gérés s&#8217;affichent sous forme d&#8217;alertes dans le panneau <em>ransomware incidents</em>. Cela inclut les événements de chiffrement, les extensions de fichiers suspects, les attaques par ransomware et les activités malveillantes. Le panneau affiche le type d&#8217;incident et indique si des actions automatiques ont été exécutées pour tenter de résoudre le problème. Par exemple, une copie Snapshot d&#8217;un volume peut être générée et envoyée dans le cloud.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/screenshot_ransomware_incidents.png" alt="Capture d&#8217;écran du panneau attaques par ransomware."></span></p>
@@ -1154,22 +1163,25 @@
 <p>Actuellement, la prise en charge concerne les clusters ONTAP sur site qui exécutent la protection autonome contre les ransomwares (ARP). ARP utilise l&#8217;analyse des charges de travail dans les environnements NAS (NFS et SMB) pour détecter et avertir de manière proactive les activités anormales qui pourraient indiquer une attaque par ransomware. <a href="https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html" target="_blank" rel="noopener">"En savoir plus"</a>.</p>
 </div>
 <div class="paragraph">
-<p>Pour analyser les incidents, vous devez avoir installé et configuré NetApp Cloud Secure. <a href="https://docs.netapp.com/us-en/cloudinsights/cs_intro.html" target="_blank" rel="noopener">"En savoir plus sur Cloud Secure"</a>. Vous pouvez ensuite cliquer sur le bouton <strong>Analyze</strong> pour obtenir des recommandations pour les étapes suivantes de la résolution du problème.</p>
+<p>Vous pouvez cliquer sur <span class="image"><img src="./media/button_down_caret.png" alt=""></span> pour développer un incident afin d&#8217;afficher le nombre de fichiers chiffrés identifiés dans le volume suspect, les types d&#8217;extensions de fichier et le moment de l&#8217;attaque.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_ransomware_incidents_expanded.png" alt="Capture d&#8217;écran du panneau incidents ransomware développée pour afficher les actions automatiques de vos volumes."></span></p>
+</div>
+<div class="paragraph">
+<p>Vous pouvez cliquer sur le bouton <strong>résoudre</strong> pour supprimer l&#8217;incident de l&#8217;interface utilisateur. Une boîte de dialogue s&#8217;affiche pour voir si l&#8217;incident signalé était ou non un vrai ransomware. Cliquez sur <strong>Oui</strong> si le problème était un vrai incident de ransomware. Cliquez sur <strong>non</strong> si le problème n&#8217;était pas un réel incident de ransomware.</p>
 </div>
 <div class="ulist">
 <div class="title">Prérequis</div>
 <ul>
 <li>
-<p>BlueXP Connector doit être installé sur votre site, non déployé auprès d&#8217;un fournisseur cloud.</p>
+<p>Vous devez disposer d&#8217;un cluster ONTAP sur site qui exécute ONTAP 9.11 ou version ultérieure.</p>
 </li>
 <li>
-<p>Vous devez disposer d&#8217;un cluster ONTAP sur site qui exécute ONTAP 9.10.1 ou version ultérieure</p>
+<p>La licence <strong>anti_ransomware</strong> (ONTAP 9.11.1 +) doit être installée sur au moins un nœud du cluster.</p>
 </li>
 <li>
-<p>Vous devez disposer d&#8217;une licence <strong>MT_EK_MGMT</strong> (ONTAP 9.10) ou <strong>anti-ransomware</strong> (ONTAP 9.11.1 +) sur au moins un nœud du cluster</p>
-</li>
-<li>
-<p>La solution NetApp ARP doit avoir été activée pendant une période d&#8217;apprentissage initiale (également appelée « exécution à sec ») pendant 30 jours avant de passer au « mode actif », offrant ainsi suffisamment de temps pour évaluer les caractéristiques de la charge de travail et signaler de façon adéquate les attaques par ransomware suspectes.</p>
+<p>La protection autonome contre les ransomwares (ARP) NetApp doit avoir été activée pendant une période d&#8217;apprentissage initiale (également appelée « exécution à sec ») pendant 30 jours avant de passer en « mode actif », ce qui lui permet d&#8217;évaluer les caractéristiques de la charge de travail et de signaler de façon adéquate les attaques par ransomware suspectes.</p>
 </li>
 </ul>
 </div>
@@ -1191,7 +1203,7 @@
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2023 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
               <a href="https://www.netapp.com/company/legal/terms-of-use/">Conditions générales</a>
